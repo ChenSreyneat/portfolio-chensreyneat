@@ -7,7 +7,7 @@ import { FaFigma } from "react-icons/fa";
 export default function TechStack() {
   const frontend = [
     { name: "React", icon: <Code2 className="text-blue-400" /> },
-    { name: "Next.js", icon: <Zap className="text-white" /> },
+    { name: "Next.js", icon: <Zap className="text-logo-color" /> },
     { name: "TypeScript", icon: <Shield className="text-blue-500" /> },
     { name: "Tailwind CSS", icon: <Palette className="text-cyan-400" /> },
   ];

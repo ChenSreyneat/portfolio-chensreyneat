@@ -35,12 +35,12 @@ export default function Contact() {
 
             <div className="flex flex-col gap-6 mt-auto">
               <div className="outline-box mb-0">
-                <Mail size={18} className="text-accent-pink" />
-                <span>hello@example.com</span>
+                <Mail size={18} className="text-pink-500" />
+                <span>chensreyneat198@gmail.com</span>
               </div>
               <div className="outline-box mb-0">
-                <Phone size={18} className="text-accent-purple" />
-                <span>+855 12 345 678</span>
+                <Phone size={18} className="text-purple-500" />
+                <span>+855 88 75 14 279</span>
               </div>
               <div className="outline-box mb-0">
                 <MapPin size={18} className="text-accent-blue" />
@@ -50,14 +50,16 @@ export default function Contact() {
 
             {/* Social Links */}
             <div className="flex justify-center gap-4 mt-8">
-              <a href="#" className="btn btn-outline p-2.5 rounded-full flex" aria-label="GitHub">
+              <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="btn btn-outline p-2.5 rounded-full flex" aria-label="GitHub">
                 <FaGithub size={18} />
               </a>
-              <a href="#" className="btn btn-outline p-2.5 rounded-full flex" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/chen-sreyneat-749654313/" target="_blank" rel="noopener noreferrer" className="btn btn-outline p-2.5 rounded-full flex" aria-label="LinkedIn">
                 <FaLinkedin size={18} />
               </a>
-              <a href="#" className="btn btn-outline p-2.5 rounded-full flex" aria-label="Twitter">
-                <FaTwitter size={18} />
+              <a href="https://t.me/Neat198" target="_blank" rel="noopener noreferrer" className="btn btn-outline p-2.5 rounded-full flex" aria-label="Telegram">
+                <svg viewBox="0 0 24 24" className="w-[18px] h-[18px] fill-current">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15.82-1.05 4.82-1.51 6.82-.19.82-.69 1.1-.98 1.12-.64.05-1.12-.42-1.74-.83-.97-.64-1.52-1.04-2.46-1.66-1.09-.72-.38-1.12.24-1.76.16-.17 3.01-2.76 3.07-3.02.01-.03.01-.15-.06-.21-.07-.06-.18-.04-.26-.02-.11.02-1.89 1.2-5.34 3.53-.51.35-.97.52-1.37.51-.45-.01-1.31-.25-1.95-.46-.78-.26-1.4-.4-1.35-.85.03-.24.36-.48 1.01-.73 3.93-1.71 6.55-2.83 7.87-3.37 3.75-1.53.78-.18 1.25.18.1.08.19.18.23.3.04.12.06.26.04.38z" />
+                </svg>
               </a>
             </div>
           </div>
@@ -69,27 +71,27 @@ export default function Contact() {
           
           <form className="flex flex-col h-full gap-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-0">
-              <div className="form-group mb-0">
-                <label htmlFor="name" className="form-label">Your Name</label>
-                <input type="text" id="name" className="form-input" placeholder="John Doe" required />
+              <div className="form-group mb-0 space-y-2">
+                <label htmlFor="name" className="text-[0.75rem] font-black uppercase tracking-[0.2em] text-text-secondary/60 flex items-center gap-2 block">Your Name</label>
+                <input type="text" id="name" className="form-input placeholder:text-text-secondary/40" placeholder="John Doe" required />
               </div>
-              <div className="form-group mb-0">
-                <label htmlFor="email" className="form-label">Your Email</label>
-                <input type="email" id="email" className="form-input" placeholder="john@example.com" required />
+              <div className="form-group mb-0 space-y-2">
+                <label htmlFor="email" className="text-[0.75rem] font-black uppercase tracking-[0.2em] text-text-secondary/60 flex items-center gap-2 block">Your Email</label>
+                <input type="email" id="email" className="form-input placeholder:text-text-secondary/40" placeholder="john@example.com" required />
               </div>
             </div>
 
-            <div className="form-group mb-0">
-              <label htmlFor="subject" className="form-label">Subject</label>
-              <input type="text" id="subject" className="form-input" placeholder="Project Inquiry" required />
+            <div className="form-group mb-0 space-y-2">
+              <label htmlFor="subject" className="text-[0.75rem] font-black uppercase tracking-[0.2em] text-text-secondary/60 flex items-center gap-2 block">Subject</label>
+              <input type="text" id="subject" className="form-input placeholder:text-text-secondary/40" placeholder="Project Inquiry" required />
             </div>
 
-            <div className="form-group mb-0 grow flex flex-col">
-              <label htmlFor="message" className="form-label">Message</label>
-              <textarea id="message" className="form-textarea grow min-h-[150px]" placeholder="Tell me about your project..." required></textarea>
+            <div className="form-group mb-0 grow flex flex-col space-y-2">
+              <label htmlFor="message" className="text-[0.75rem] font-black uppercase tracking-[0.2em] text-text-secondary/60 flex items-center gap-2 block">Message</label>
+              <textarea id="message" className="form-textarea grow min-h-[150px] placeholder:text-text-secondary/40" placeholder="Tell me about your project..." required></textarea>
             </div>
 
-            <button type="submit" className="btn btn-primary w-full p-4 mt-4 flex justify-center items-center gap-2">
+            <button type="submit" className="btn btn-primary w-full p-4 mt-4 flex justify-center items-center gap-2 cursor-pointer transition-all active:scale-[0.98] shadow-lg">
               <Send size={18} /> Send Message
             </button>
           </form>

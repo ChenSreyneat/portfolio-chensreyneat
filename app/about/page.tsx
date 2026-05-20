@@ -33,7 +33,7 @@ export default function About() {
               <div className="absolute inset-0 bg-accent-blue/10 blur-[40px] rounded-full group-hover:bg-accent-blue/20 transition-all duration-700" />
               
               {/* Profile Image with Bottom Fade */}
-              <div className="relative w-full h-full rounded-[2rem] overflow-hidden border border-white/5 group-hover:border-accent-blue/30 transition-all duration-700">
+              <div className="relative w-full h-full rounded-[2rem] overflow-hidden border border-glass-border group-hover:border-accent-blue/30 transition-all duration-700">
                 <Image
                   src="/image/remove-bg.png"
                   alt="Chen Sreyneat"
@@ -41,7 +41,7 @@ export default function About() {
                   className="object-contain object-bottom group-hover:scale-105 transition-transform duration-700"
                   priority
                 />
-                <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-[#0a0a0a] via-[#0a0a0a]/60 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-[var(--bg-color)] via-[var(--bg-color)]/60 to-transparent" />
               </div>
             </div>
 
@@ -53,7 +53,7 @@ export default function About() {
                 </div>
                 <div className="flex flex-col">
                   <span className="text-[0.6rem] uppercase tracking-tighter text-gray-500 font-bold">Location</span>
-                  <span className="text-sm font-bold text-white">Phnom Penh, Cambodia</span>
+                  <span className="text-sm font-bold text-text-primary">Phnom Penh, Cambodia</span>
                 </div>
               </div>
 
@@ -63,8 +63,8 @@ export default function About() {
                   <Globe size={16} /> Languages
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-4 py-1.5 rounded-lg bg-white/5 border border-white/10 text-[0.7rem] font-bold text-accent-blue uppercase tracking-widest">Khmer</span>
-                  <span className="px-4 py-1.5 rounded-lg bg-white/5 border border-white/10 text-[0.7rem] font-bold text-accent-blue uppercase tracking-widest">English</span>
+                  <span className="px-4 py-1.5 rounded-lg bg-glass-bg border border-glass-border text-[0.7rem] font-bold text-logo-color uppercase tracking-widest">Khmer</span>
+                  <span className="px-4 py-1.5 rounded-lg bg-glass-bg border border-glass-border text-[0.7rem] font-bold text-logo-color uppercase tracking-widest">English</span>
                 </div>
               </div>
 
@@ -80,7 +80,7 @@ export default function About() {
                     { icon: CheckCircle, label: "Responsible" },
                     { icon: MessageSquare, label: "Communication" }
                   ].map((skill, i) => (
-                    <div key={i} className="flex items-center gap-3 px-4 py-3 rounded-xl bg-white/[0.03] border border-white/5 text-xs font-bold text-gray-400 hover:text-white hover:bg-white/5 hover:border-accent-blue/30 transition-all cursor-default">
+                    <div key={i} className="flex items-center gap-3 px-4 py-3 rounded-xl bg-glass-bg border border-glass-border text-xs font-bold text-text-secondary hover:text-logo-color hover:bg-logo-color/10 hover:border-logo-color/30 transition-all cursor-default">
                       <skill.icon size={16} className="text-accent-blue" /> {skill.label}
                     </div>
                   ))}
@@ -98,22 +98,22 @@ export default function About() {
                   <span className="text-accent-blue font-bold uppercase tracking-[0.4em] text-[0.6rem]">About Me</span>
                   <div className="w-8 h-[1px] bg-accent-blue/50" />
                 </div>
-                <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-4">
+                <h1 className="text-4xl md:text-6xl font-bold text-text-primary leading-tight mb-4">
                   Chen <span className="text-accent-blue">Sreyneat</span>
                 </h1>
-                <p className="text-[#a6e3f5] text-xl md:text-2xl font-medium tracking-tight mb-6">Software Development Student</p>
+                <p className="text-accent-blue text-xl md:text-2xl font-medium tracking-tight mb-6">Software Development Student</p>
                 <p className="text-text-secondary text-lg leading-relaxed italic max-w-2xl">
                   &quot;I am a dedicated developer who loves crafting beautiful, user-friendly applications. I blend creativity with technology to create amazing experiences.&quot;
                 </p>
               </div>
 
-              {/* Action Buttons */}
+               {/* Action Buttons */}
               <div className="flex flex-wrap gap-3">
                 <a 
                   href="https://www.linkedin.com/in/chen-sreyneat-749654313/" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-accent-blue/10 border border-accent-blue/20 text-[0.7rem] font-bold text-white hover:bg-accent-blue transition-all"
+                  className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-linear-to-r from-[#2c53a6] to-[#60a5fa] hover:from-[#214185] hover:to-[#4fa1ff] text-[0.7rem] font-bold text-white shadow-md shadow-blue-500/10 active:scale-95 transition-all"
                 >
                   <FaLinkedin size={16} /> LinkedIn
                 </a>
@@ -121,15 +121,15 @@ export default function About() {
                   href="https://github.com/" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-[0.7rem] font-bold text-gray-400 hover:bg-white/10 hover:text-white transition-all"
+                  className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-glass-bg border border-glass-border text-[0.7rem] font-bold text-text-secondary hover:bg-logo-color/10 hover:border-logo-color hover:text-logo-color transition-all"
                 >
                   <FaGithub size={16} /> GitHub
                 </a>
                 <a 
                   href="https://t.me/Neat198" 
-                  target="_blank"
+                  target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-[0.7rem] font-bold text-gray-400 hover:bg-white/10 hover:text-white transition-all"
+                  className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-glass-bg border border-glass-border text-[0.7rem] font-bold text-text-secondary hover:bg-logo-color/10 hover:border-logo-color hover:text-logo-color transition-all"
                 >
                   <FaTelegram size={16} /> Telegram
                 </a>
@@ -137,28 +137,27 @@ export default function About() {
                   href="https://mail.google.com/mail/?view=cm&fs=1&to=chensreyneat198@gmail.com" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-[0.7rem] font-bold text-gray-400 hover:bg-white/10 hover:text-white transition-all"
+                  className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-glass-bg border border-glass-border text-[0.7rem] font-bold text-text-secondary hover:bg-logo-color/10 hover:border-logo-color hover:text-logo-color transition-all"
                 >
                   <Mail size={16} /> Gmail
                 </a>
               </div>
             </div>
 
-            {/* Experience Section in About */}
-            <div className="space-y-10">
-              <h2 className="text-3xl font-bold text-white flex items-center gap-4">
+             <div className="space-y-10">
+              <h2 className="text-3xl font-bold text-text-primary flex items-center gap-4">
                 <div className="w-10 h-[2px] bg-accent-blue" />
                 Work Experience
               </h2>
 
               <div className="grid grid-cols-1 gap-8">
-                <div className="group relative bg-white/[0.03] border border-white/10 rounded-[2rem] p-8 md:p-10 transition-all duration-500 hover:bg-white/5 hover:border-accent-blue/30 shadow-2xl">
+                <div className="group relative bg-glass-bg border border-glass-border rounded-[2rem] p-8 md:p-10 transition-all duration-500 hover:bg-logo-color/5 hover:border-accent-blue/30 shadow-2xl">
                   <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
                     <div>
                       <span className="text-accent-blue text-[0.6rem] font-black uppercase tracking-widest block mb-1">2022 - May 2023</span>
-                      <h3 className="text-2xl font-bold text-white group-hover:text-accent-blue transition-colors">SROLANH Smart Store</h3>
+                      <h3 className="text-2xl font-bold text-text-primary group-hover:text-accent-blue transition-colors">SROLANH Smart Store</h3>
                     </div>
-                    <span className="px-4 py-1.5 rounded-full bg-accent-blue/10 border border-accent-blue/20 text-[0.6rem] font-bold text-white uppercase tracking-widest">Graphic Designer</span>
+                    <span className="px-4 py-1.5 rounded-full bg-accent-blue/10 border border-accent-blue/20 text-[0.6rem] font-bold text-logo-color uppercase tracking-widest">Graphic Designer</span>
                   </div>
                   <ul className="space-y-4 text-text-secondary text-sm md:text-base leading-relaxed">
                     <li className="flex gap-4">
