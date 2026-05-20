@@ -75,17 +75,38 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <div className="absolute top-full left-0 right-0 m-2 mt-4 bg-glass-bg border border-glass-border backdrop-blur-xl rounded-2xl lg:hidden z-50 shadow-2xl">
+        <div 
+          className="absolute top-full left-0 right-0 m-2 mt-4 border backdrop-blur-xl rounded-2xl lg:hidden z-50 shadow-2xl transition-colors duration-300"
+          style={{ 
+            backgroundColor: 'var(--dropdown-bg)', 
+            borderColor: 'var(--dropdown-border)' 
+          }}
+        >
           <ul className="list-none p-6 flex flex-col gap-4">
             {navLinks.map((link) => (
               <li key={link.name}>
-                <Link href={link.href} onClick={() => setIsOpen(false)} className="flex items-center gap-3 text-sm font-medium text-text-primary hover:text-accent-blue transition-all">
-                  <link.icon size={18} className="text-accent-blue" /> {link.name}
+                <Link 
+                  href={link.href} 
+                  onClick={() => setIsOpen(false)} 
+                  className="flex items-center gap-3 text-sm font-medium hover:scale-[1.02] active:scale-95 transition-all"
+                  style={{ color: 'var(--dropdown-text)' }}
+                >
+                  <link.icon 
+                    size={18} 
+                    style={{ color: 'var(--dropdown-icon)' }} 
+                  /> 
+                  {link.name}
                 </Link>
               </li>
             ))}
-            <li className="pt-4 border-t border-glass-border">
-              <a href="/image/CV_Chen_Sreyneat.pdf" download onClick={() => setIsOpen(false)} className="flex items-center gap-3 text-sm font-bold text-accent-blue">
+            <li className="pt-4 border-t" style={{ borderColor: 'var(--dropdown-border)' }}>
+              <a 
+                href="/image/CV_Chen_Sreyneat.pdf" 
+                download 
+                onClick={() => setIsOpen(false)} 
+                className="flex items-center gap-3 text-sm font-bold hover:scale-[1.02] active:scale-95 transition-all"
+                style={{ color: 'var(--dropdown-icon)' }}
+              >
                 <Download size={18} /> Download CV
               </a>
             </li>

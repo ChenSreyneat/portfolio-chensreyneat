@@ -42,13 +42,13 @@ export default function ProjectsSection() {
       image: "/image/image-service-me.png"
     },
     {
-      title: "Viral Video Marketing",
+      title: "TikTok Viral Video Marketing",
       desc: "Professional video editing and cinematic color grading for high-engagement social media content.",
       tags: ["CapCut", "Video Editing", "Social Media"],
       gradient: "from-[#0a1c4b]/40 to-[#1d70a2]/20",
       color: "text-[#a6e3f5]",
       github: "",
-      live: "https://www.tiktok.com/@code.bridge2026",
+      live: "https://www.tiktok.com/@code.bridge2026?_r=1&_t=ZS-96WUSyJhGxc",
       image: "/image/image-tik-tok.png"
     },
     {
