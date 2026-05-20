@@ -31,7 +31,7 @@ export default function Navbar() {
             <div className="text-accent-blue group-hover:rotate-12 transition-transform duration-500">
               <Flower2 size={28} />
             </div>
-            <span className="text-lg font-bold tracking-tight text-white hidden sm:block">Sreyneat<span className="text-accent-blue">.</span></span>
+            <span className="text-lg font-bold tracking-tight text-logo-color hidden sm:block">Sreyneat<span className="text-accent-blue">.</span></span>
           </Link>
         </div>
 

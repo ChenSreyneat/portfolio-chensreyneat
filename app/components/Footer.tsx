@@ -13,7 +13,7 @@ export default function Footer() {
               <div className="text-accent-blue group-hover:rotate-12 transition-transform duration-500">
                 <Flower2 size={28} />
               </div>
-              <span className="text-xl font-bold tracking-tight text-text-primary">Sreyneat<span className="text-accent-blue">.</span></span>
+              <span className="text-xl font-bold tracking-tight text-logo-color">Sreyneat<span className="text-accent-blue">.</span></span>
             </div>
             <p className="text-text-secondary text-sm leading-relaxed max-w-[200px] md:max-w-xs mx-auto md:mx-0">
               Building digital products with a focus on aesthetics, usability, and high-end professional experiences.

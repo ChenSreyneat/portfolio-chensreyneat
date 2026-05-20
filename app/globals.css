@@ -14,6 +14,7 @@
   --color-nav-bg: var(--nav-bg);
   --color-card-shadow: var(--card-shadow);
   --color-project-bg: var(--project-bg);
+  --color-logo-color: var(--logo-color);
 
   --font-inter: var(--font-inter), sans-serif;
   --font-outfit: var(--font-outfit), sans-serif;
@@ -42,6 +43,7 @@
   --nav-border: rgba(255, 255, 255, 0.1);
   --card-shadow: rgba(0, 0, 0, 0.6);
   --project-bg: rgba(255, 255, 255, 0.02);
+  --logo-color: #ffffff;
 }
 
 [data-theme='light'] {
@@ -57,6 +59,7 @@
   --nav-border: rgba(29, 112, 162, 0.15);
   --card-shadow: rgba(10, 28, 75, 0.05);
   --project-bg: rgba(29, 112, 162, 0.05);
+  --logo-color: #305AAD;
 }
 
 @layer base {
