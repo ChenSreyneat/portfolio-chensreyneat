@@ -60,7 +60,7 @@ export default function ContactSection() {
           <span className="text-accent-blue font-bold uppercase tracking-[0.4em] text-[0.6rem]">Get In Touch</span>
           <div className="w-8 h-[1px] bg-accent-blue/50" />
         </div>
-        <h2 className="text-3xl md:text-5xl font-bold text-white max-w-2xl leading-tight mb-2">
+        <h2 className="text-3xl md:text-5xl font-bold text-text-primary max-w-2xl leading-tight mb-2">
           Contact <span className="text-accent-blue">Me</span>
         </h2>
         <p className="text-text-secondary text-xl font-medium tracking-tight mb-6">Let&apos;s get in touch.</p>
@@ -200,7 +200,7 @@ export default function ContactSection() {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Your name"
-                    className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-5 py-4 text-sm text-white placeholder:text-gray-600 focus:outline-none focus:border-accent-blue/50 focus:bg-accent-blue/5 focus:shadow-[0_0_25px_rgba(26,35,105,0.15)] transition-all"
+                    className="w-full bg-glass-bg border border-glass-border rounded-xl px-5 py-4 text-sm text-text-primary placeholder:text-text-secondary/40 focus:outline-none focus:border-accent-blue/50 focus:bg-accent-blue/5 transition-all"
                   />
                 </div>
               </div>
@@ -214,7 +214,7 @@ export default function ContactSection() {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="your@email.com"
-                  className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-5 py-4 text-sm text-white placeholder:text-gray-600 focus:outline-none focus:border-accent-blue/50 focus:bg-accent-blue/5 focus:shadow-[0_0_25px_rgba(26,35,105,0.15)] transition-all"
+                  className="w-full bg-glass-bg border border-glass-border rounded-xl px-5 py-4 text-sm text-text-primary placeholder:text-text-secondary/40 focus:outline-none focus:border-accent-blue/50 focus:bg-accent-blue/5 transition-all"
                 />
               </div>
             </div>
@@ -229,7 +229,7 @@ export default function ContactSection() {
                 value={formData.subject}
                 onChange={handleChange}
                 placeholder="What's this about?"
-                className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-5 py-4 text-sm text-white placeholder:text-gray-600 focus:outline-none focus:border-accent-blue/50 focus:bg-accent-blue/5 focus:shadow-[0_0_25px_rgba(26,35,105,0.15)] transition-all"
+                className="w-full bg-glass-bg border border-glass-border rounded-xl px-5 py-4 text-sm text-text-primary placeholder:text-text-secondary/40 focus:outline-none focus:border-accent-blue/50 focus:bg-accent-blue/5 transition-all"
               />
             </div>
 
@@ -242,7 +242,7 @@ export default function ContactSection() {
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Tell me about your project or question..."
-                className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-5 py-4 text-sm text-white placeholder:text-gray-600 focus:outline-none focus:border-accent-blue/50 focus:bg-accent-blue/5 focus:shadow-[0_0_25px_rgba(29,112,162,0.15)] transition-all min-h-[160px] resize-none"
+                className="w-full bg-glass-bg border border-glass-border rounded-xl px-5 py-4 text-sm text-text-primary placeholder:text-text-secondary/40 focus:outline-none focus:border-accent-blue/50 focus:bg-accent-blue/5 transition-all min-h-[160px] resize-none"
               ></textarea>
             </div>
 

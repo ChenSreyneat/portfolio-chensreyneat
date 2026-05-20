@@ -85,7 +85,7 @@ export default function SkillsSection() {
           <span className="text-accent-blue font-bold uppercase tracking-[0.4em] text-[0.6rem]">Skills</span>
           <div className="w-8 h-[1px] bg-accent-blue/50" />
         </div>
-        <h2 className="text-3xl md:text-5xl font-bold text-white max-w-2xl leading-tight">
+        <h2 className="text-3xl md:text-5xl font-bold text-text-primary max-w-2xl leading-tight">
           Skills <span className="text-accent-blue">I Know</span>
         </h2>
       </div>

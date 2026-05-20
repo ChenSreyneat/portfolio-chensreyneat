@@ -58,17 +58,17 @@ export default function AboutSection() {
                 <div className="w-10 h-10 rounded-full bg-accent-blue/10 flex items-center justify-center text-accent-blue border border-accent-blue/20 shadow-[0_0_15px_rgba(26,35,105,0.2)]">
                   <MapPin size={18} />
                 </div>
-                <span className="text-base font-medium text-gray-300 tracking-tight">Phnom Penh/Cambodia.</span>
+                <span className="text-base font-medium text-text-primary tracking-tight">Phnom Penh/Cambodia.</span>
               </div>
 
               <div className="space-y-4">
-                <div className="flex items-center gap-3 text-white">
-                  <Globe size={22} className="text-gray-400" />
+                <div className="flex items-center gap-3 text-text-primary">
+                  <Globe size={22} className="text-text-secondary" />
                   <span className="text-lg font-bold">Languages</span>
                 </div>
                 <div className="flex flex-wrap gap-3">
-                  <span className="px-6 py-3 rounded-2xl bg-white/[0.02] border border-white/10 text-sm font-bold text-gray-400">Khmer</span>
-                  <span className="px-6 py-3 rounded-2xl bg-white/[0.02] border border-white/10 text-sm font-bold text-gray-400">English</span>
+                  <span className="px-6 py-3 rounded-2xl bg-glass-bg border border-glass-border text-sm font-bold text-text-secondary">Khmer</span>
+                  <span className="px-6 py-3 rounded-2xl bg-glass-bg border border-glass-border text-sm font-bold text-text-secondary">English</span>
                 </div>
               </div>
             </div>
@@ -80,7 +80,7 @@ export default function AboutSection() {
               <Link href="/about" className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-blue/10 border border-accent-blue/20 text-accent-blue text-xs font-bold transition-all hover:bg-accent-blue/20 w-fit">
                 <Calendar size={14} /> Schedule a call <ExternalLink size={12} />
               </Link>
-              <h2 className="text-3xl md:text-5xl font-bold tracking-tight leading-tight text-white m-0">
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight leading-tight text-text-primary m-0">
                 Fusing <span className="text-gradient-accent">Creativity</span> <br />
                 With High-End Design
               </h2>

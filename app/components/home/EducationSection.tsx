@@ -33,7 +33,7 @@ export default function EducationSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4">
           {education.map((item, index) => (
             <div key={index} className="group relative h-full">
-              <div className="relative h-full flex flex-col bg-white/[0.03] border border-white/10 rounded-2xl p-6 transition-all duration-300 hover:bg-white/[0.05] hover:border-accent-blue/30 hover:-translate-y-1">
+              <div className="relative h-full flex flex-col bg-glass-bg border border-glass-border rounded-2xl p-6 transition-all duration-300 hover:border-accent-blue/30 hover:-translate-y-1">
                 <div className="flex items-start justify-between mb-4">
                   <div className="p-3 bg-accent-blue/10 rounded-xl text-accent-blue">
                     <item.icon size={24} />
@@ -41,10 +41,10 @@ export default function EducationSection() {
                   <span className="text-accent-blue font-bold text-sm">{item.period}</span>
                 </div>
                 <div className="space-y-2 flex-1">
-                  <h3 className="text-xl font-bold text-white group-hover:text-accent-blue transition-colors">
+                  <h3 className="text-xl font-bold text-text-primary group-hover:text-accent-blue transition-colors">
                     {item.school}
                   </h3>
-                  <p className="text-accent-light/80 text-sm font-medium">{item.major}</p>
+                  <p className="text-accent-blue/80 text-sm font-semibold">{item.major}</p>
                   <p className="text-text-secondary text-sm leading-relaxed">
                     {item.description}
                   </p>

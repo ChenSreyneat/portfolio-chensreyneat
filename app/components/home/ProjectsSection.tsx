@@ -144,7 +144,7 @@ export default function ProjectsSection() {
           <span className="text-accent-blue font-bold uppercase tracking-[0.4em] text-[0.6rem]">Projects</span>
           <div className="w-8 h-[1px] bg-accent-blue/50" />
         </div>
-        <h2 className="text-3xl md:text-5xl font-bold text-white max-w-2xl leading-tight mb-4">
+        <h2 className="text-3xl md:text-5xl font-bold text-text-primary max-w-2xl leading-tight mb-4">
           Featured <span className="text-accent-blue">Projects</span>
         </h2>
         <p className="text-text-secondary text-base md:text-lg max-w-2xl">
@@ -185,7 +185,7 @@ export default function ProjectsSection() {
           {projects.map((project, index) => (
             <div 
               key={index} 
-              className="flex-shrink-0 w-[280px] md:w-[360px] group relative flex flex-col justify-between bg-white/[0.03] border border-white/10 rounded-[2rem] p-6 transition-all duration-500 hover:bg-white/5 hover:border-accent-blue/30 hover:-translate-y-1.5"
+              className="flex-shrink-0 w-[280px] md:w-[360px] group relative flex flex-col justify-between bg-glass-bg border border-glass-border rounded-[2rem] p-6 transition-all duration-500 hover:border-accent-blue/30 hover:-translate-y-1.5"
             >
               <div className="flex flex-col">
                 <div className={`w-full aspect-video bg-linear-to-br ${project.gradient} rounded-xl mb-6 flex items-center justify-center overflow-hidden relative`}>
@@ -233,7 +233,7 @@ export default function ProjectsSection() {
 
               <div className="flex flex-wrap gap-2 mt-auto">
                 {project.tags.map((tag) => (
-                  <span key={tag} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[0.7rem] font-bold text-text-secondary">
+                  <span key={tag} className="px-3 py-1 rounded-full bg-glass-bg border border-glass-border text-[0.7rem] font-bold text-text-secondary">
                     {tag}
                   </span>
                 ))}

@@ -40,7 +40,7 @@ export default function Navbar() {
           <ul className="nav-links flex items-center gap-6">
             {desktopLinks.map((link) => (
               <li key={link.name}>
-                <Link href={link.href} className="flex items-center gap-1.5 text-xs font-semibold text-text-secondary hover:text-white transition-colors duration-300">
+                <Link href={link.href} className="flex items-center gap-1.5 text-xs font-semibold text-text-secondary hover:text-text-primary transition-colors duration-300">
                   <link.icon size={13} className="text-accent-blue/60 transition-colors" /> {link.name}
                 </Link>
               </li>
@@ -64,7 +64,7 @@ export default function Navbar() {
         <div className="flex lg:hidden items-center gap-4">
           <ThemeToggle />
           <button
-            className="bg-transparent border-none text-white cursor-pointer p-1 transition-transform active:scale-95"
+            className="bg-transparent border-none text-text-primary cursor-pointer p-1 transition-transform active:scale-95"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -75,16 +75,16 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <div className="absolute top-full left-0 right-0 m-2 mt-4 bg-[#030d1f] border border-white/10 rounded-2xl lg:hidden z-50 shadow-2xl">
+        <div className="absolute top-full left-0 right-0 m-2 mt-4 bg-glass-bg border border-glass-border backdrop-blur-xl rounded-2xl lg:hidden z-50 shadow-2xl">
           <ul className="list-none p-6 flex flex-col gap-4">
             {navLinks.map((link) => (
               <li key={link.name}>
-                <Link href={link.href} onClick={() => setIsOpen(false)} className="flex items-center gap-3 text-sm font-medium text-white hover:text-accent-blue transition-all">
+                <Link href={link.href} onClick={() => setIsOpen(false)} className="flex items-center gap-3 text-sm font-medium text-text-primary hover:text-accent-blue transition-all">
                   <link.icon size={18} className="text-accent-blue" /> {link.name}
                 </Link>
               </li>
             ))}
-            <li className="pt-4 border-t border-white/5">
+            <li className="pt-4 border-t border-glass-border">
               <a href="/image/CV_Chen_Sreyneat.pdf" download onClick={() => setIsOpen(false)} className="flex items-center gap-3 text-sm font-bold text-accent-blue">
                 <Download size={18} /> Download CV
               </a>

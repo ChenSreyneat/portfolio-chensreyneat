@@ -123,7 +123,7 @@ export default function ExperienceSection() {
           <span className="text-accent-blue font-bold uppercase tracking-[0.4em] text-[0.6rem]">Professional History</span>
           <div className="w-8 h-[1px] bg-accent-blue/50" />
         </div>
-        <h2 className="text-3xl md:text-5xl font-bold text-white max-w-2xl leading-tight mb-4">
+        <h2 className="text-3xl md:text-5xl font-bold text-text-primary max-w-2xl leading-tight mb-4">
           Professional <span className="text-accent-blue">Journey</span>
         </h2>
         <p className="text-text-secondary text-base md:text-lg max-w-lg italic">
@@ -164,18 +164,18 @@ export default function ExperienceSection() {
           {experiences.map((exp, index) => (
             <div 
               key={index} 
-              className="flex-shrink-0 w-[290px] md:w-[400px] group relative flex flex-col justify-between bg-white/[0.03] border border-white/10 rounded-[2rem] p-6 md:p-8 transition-all duration-500 hover:bg-white/[0.05] hover:border-accent-blue/30 hover:-translate-y-1.5"
+              className="flex-shrink-0 w-[290px] md:w-[400px] group relative flex flex-col justify-between bg-glass-bg border border-glass-border rounded-[2rem] p-6 md:p-8 transition-all duration-500 hover:border-accent-blue/30 hover:-translate-y-1.5"
             >
               <div className="flex flex-col">
                 {/* Header: Title & Company + Logo */}
-                <div className="flex flex-row justify-between items-start gap-4 mb-6 pb-6 border-b border-white/5">
+                <div className="flex flex-row justify-between items-start gap-4 mb-6 pb-6 border-b border-glass-border">
                   <div className="flex-1">
                     <div className="flex flex-wrap items-center gap-2 mb-2">
                       <span className="text-accent-blue text-[0.55rem] font-bold uppercase tracking-[0.3em]">{exp.company}</span>
-                      <div className="w-1.5 h-1.5 rounded-full bg-white/20" />
-                      <span className="text-gray-500 text-[0.55rem] font-bold uppercase tracking-[0.3em]">{exp.period}</span>
+                      <div className="w-1.5 h-1.5 rounded-full bg-text-secondary/20" />
+                      <span className="text-text-secondary text-[0.55rem] font-bold uppercase tracking-[0.3em]">{exp.period}</span>
                     </div>
-                    <h3 className="text-lg md:text-xl font-bold text-white group-hover:text-accent-blue transition-colors duration-300 mb-2 leading-snug">
+                    <h3 className="text-lg md:text-xl font-bold text-text-primary group-hover:text-accent-blue transition-colors duration-300 mb-2 leading-snug">
                       {exp.role}
                     </h3>
                     <div className="flex flex-wrap items-center gap-3">
@@ -197,28 +197,28 @@ export default function ExperienceSection() {
                 </div>
 
                 {/* Body Content */}
-                <p className="text-text-secondary text-sm leading-relaxed mb-6 group-hover:text-white transition-colors">
+                <p className="text-text-secondary text-sm leading-relaxed mb-6 group-hover:text-text-primary transition-colors">
                   {exp.description}
                 </p>
               </div>
 
               {/* Reference & Department Row */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-white/5 mt-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-glass-border mt-auto">
                 <div className="flex items-center gap-2.5">
                   <div className="w-8 h-8 rounded-full bg-accent-blue/10 flex items-center justify-center border border-accent-blue/20 flex-shrink-0">
                     <User size={14} className="text-accent-blue" />
                   </div>
                   <div className="min-w-0">
-                    <p className="text-[0.5rem] text-gray-500 uppercase font-black tracking-widest mb-0.5 truncate">Reference</p>
-                    <p className="text-[0.65rem] text-white font-bold truncate">{exp.reference.name}</p>
+                    <p className="text-[0.5rem] text-text-secondary uppercase font-black tracking-widest mb-0.5 truncate">Reference</p>
+                    <p className="text-[0.65rem] text-text-primary font-bold truncate">{exp.reference.name}</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center border border-white/10 flex-shrink-0">
-                    <Phone size={14} className="text-gray-500" />
+                  <div className="w-8 h-8 rounded-full bg-glass-bg border border-glass-border flex-shrink-0 flex items-center justify-center">
+                    <Phone size={14} className="text-text-secondary" />
                   </div>
                   <div className="min-w-0">
-                    <p className="text-[0.5rem] text-gray-500 uppercase font-black tracking-widest mb-0.5 truncate">Contact</p>
+                    <p className="text-[0.5rem] text-text-secondary uppercase font-black tracking-widest mb-0.5 truncate">Contact</p>
                     <a href={`tel:${exp.reference.tel}`} className="text-[0.65rem] text-accent-blue font-bold hover:underline truncate block">{exp.reference.tel}</a>
                   </div>
                 </div>

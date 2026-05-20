@@ -30,7 +30,7 @@ export default function HeroSection() {
             <a 
               href="/image/CV_Chen_Sreyneat.pdf" 
               download 
-              className="inline-flex items-center gap-2 text-white hover:text-accent-blue font-bold text-base transition-all duration-300 cursor-pointer py-2"
+              className="inline-flex items-center gap-2 text-text-primary hover:text-accent-blue font-bold text-base transition-all duration-300 cursor-pointer py-2"
             >
               <Download size={20} className="stroke-[2.5]" /> Download CV
             </a>
