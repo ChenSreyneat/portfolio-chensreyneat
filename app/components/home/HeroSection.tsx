@@ -44,7 +44,7 @@ export default function HeroSection() {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-accent-blue/10 blur-[80px] -z-20" />
 
             {/* Decorative Outline Frame */}
-            <div className="absolute inset-0 border border-white/10 rounded-[3rem] rotate-[12deg] -z-10" />
+            <div className="absolute inset-0 border border-glass-border rounded-[3rem] rotate-[12deg] -z-10" />
 
             {/* Solid Blue Box with Grid */}
             <div className="absolute inset-0 bg-accent-blue rounded-[3rem] -rotate-[10deg] -z-10 overflow-hidden shadow-2xl shadow-accent-blue/20">
@@ -59,17 +59,17 @@ export default function HeroSection() {
 
             {/* Decorative Floating Elements */}
             {/* Top Left Angle */}
-            <div className="absolute -top-4 left-4 text-white/30 -rotate-12">
-              <div className="w-8 h-8 border-l-2 border-t-2 border-white/20" />
+            <div className="absolute -top-4 left-4 text-text-primary/30 -rotate-12">
+              <div className="w-8 h-8 border-l-2 border-t-2 border-current/25" />
             </div>
 
             {/* Bottom Right Plus */}
-            <div className="absolute bottom-[15%] -right-4 text-white/40">
+            <div className="absolute bottom-[15%] -right-4 text-text-primary/40">
               <span className="text-3xl font-light">+</span>
             </div>
 
             {/* Top Right Dots */}
-            <div className="absolute top-4 right-4 text-white/20 grid grid-cols-2 gap-2">
+            <div className="absolute top-4 right-4 text-text-primary/20 grid grid-cols-2 gap-2">
               <div className="w-2 h-2 rounded-full border border-current" />
               <div className="w-2 h-2 rounded-full bg-current" />
               <div className="w-2 h-2 rounded-full bg-current" />
@@ -90,7 +90,7 @@ export default function HeroSection() {
             </div>
 
             {/* Decorative Tag */}
-            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 glass-card py-2 px-6 rounded-full border-accent-blue/30 shadow-xl text-[0.7rem] font-bold uppercase text-accent-blue z-20 whitespace-nowrap">
+            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-glass-bg border border-glass-border backdrop-blur-xl py-2.5 px-6 rounded-full shadow-lg text-[0.75rem] font-bold uppercase text-logo-color z-20 whitespace-nowrap tracking-wider transition-all duration-300 hover:scale-105">
               Web Development
             </div>
           </div>
