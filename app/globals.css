@@ -50,6 +50,10 @@
   --dropdown-border: rgba(255, 255, 255, 0.12);
   --dropdown-text: rgba(255, 255, 255, 0.9);
   --dropdown-icon: #60A5FA;
+
+  /* Accent Gradient Colors */
+  --gradient-accent-start: #5fa5fa;
+  --gradient-accent-end: #1d70a2;
 }
 
 [data-theme='light'] {
@@ -72,6 +76,10 @@
   --dropdown-border: rgba(29, 112, 162, 0.15);
   --dropdown-text: #0a1c4b;
   --dropdown-icon: #1d70a2;
+
+  /* Accent Gradient Colors */
+  --gradient-accent-start: #1D70A2;
+  --gradient-accent-end: #0a1c4b;
 }
 
 @layer base {
@@ -146,7 +154,8 @@
   }
 
   .text-gradient-accent {
-    @apply bg-clip-text text-transparent bg-linear-to-br from-accent-light via-accent-blue to-accent-mid;
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(to right, var(--gradient-accent-start), var(--gradient-accent-end));
   }
 
   .navbar {
