@@ -15,12 +15,11 @@ export default function Navbar() {
     { name: "Experience", href: "/#experience", icon: Briefcase },
     { name: "Education", href: "/#education", icon: GraduationCap },
     { name: "Projects", href: "/#projects", icon: Briefcase },
-    { name: "Tools", href: "/#tools", icon: Settings },
     { name: "Contact", href: "/#contact", icon: Mail },
   ];
 
   const desktopLinks = navLinks.filter(link => 
-    ["About", "Skills", "Experience", "Projects", "Tools", "Contact"].includes(link.name)
+    ["About", "Skills", "Experience", "Projects", "Contact"].includes(link.name)
   );
 
   return (

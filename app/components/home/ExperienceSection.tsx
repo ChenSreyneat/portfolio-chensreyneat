@@ -113,10 +113,6 @@ export default function ExperienceSection() {
 
   return (
     <section id="experience" className="py-24 relative overflow-hidden">
-      {/* Background Decorative Elements */}
-      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-accent-blue/5 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-accent-blue/5 rounded-full blur-[120px] pointer-events-none" />
-
       <div className="flex flex-col items-center text-center mb-16 relative z-10 px-4">
         <div className="flex items-center justify-center gap-3 mb-4">
           <div className="w-8 h-[1px] bg-accent-blue/50" />

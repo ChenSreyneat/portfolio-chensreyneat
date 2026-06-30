@@ -40,9 +40,6 @@ export default function HeroSection() {
         {/* Profile Image - Appears first on mobile */}
         <div className="flex justify-center lg:justify-end order-1 lg:order-2">
           <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px]">
-            {/* Background Glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-accent-blue/10 blur-[80px] -z-20" />
-
             {/* Decorative Outline Frame */}
             <div className="absolute inset-0 border border-glass-border rounded-[3rem] rotate-[12deg] -z-10" />
 

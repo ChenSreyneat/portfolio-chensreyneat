@@ -73,10 +73,9 @@ export default function SkillsSection() {
   }, []);
 
   return (
-    <section id="skills" className="py-24 relative overflow-hidden bg-transparent border-t border-glass-border/30">
-      {/* Decorative Glows */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-accent-light/5 blur-[100px] -z-10" />
-      <div className="absolute bottom-0 right-0 w-64 h-64 bg-accent-blue/5 blur-[100px] -z-10" />
+    <section id="skills" className="py-24 relative overflow-hidden bg-transparent">
+      {/* Background UI - Fixed & Enhanced */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1d70a208_1px,transparent_1px),linear-gradient(to_bottom,#1d70a208_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
 
       {/* Section Header */}
       <div className="flex flex-col items-center text-center mb-16 relative z-10 px-4">
@@ -126,8 +125,11 @@ export default function SkillsSection() {
                 className="flex-shrink-0 w-36 md:w-40 h-52 md:h-56 bg-glass-bg border border-glass-border backdrop-blur-xl rounded-[2rem] hover:border-accent-blue dark:hover:border-accent-light hover:-translate-y-1.5 transition-all duration-500 flex flex-col items-center justify-between py-8 px-4 cursor-pointer"
               >
                 {/* Icon Container */}
-                <div className="flex items-center justify-center w-16 h-16 text-accent-blue">
-                  <skill.icon className="w-12 h-12 transition-transform duration-500 hover:scale-105" />
+                <div className="flex items-center justify-center w-16 h-16">
+                  <skill.icon 
+                    className="w-12 h-12 transition-transform duration-500 hover:scale-105" 
+                    style={skill.color ? { color: skill.color } : undefined}
+                  />
                 </div>
                 
                 {/* Title & Skill Value */}
