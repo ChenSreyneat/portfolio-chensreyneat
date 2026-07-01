@@ -76,7 +76,7 @@ function SkillBadge({ name, icon: Icon, color }: { name: string; icon: any; colo
         "--brand-color": color,
         "--hover-text-color": hoverTextColor
       } as React.CSSProperties}
-      className="skill-badge-hover flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-500/5 dark:bg-slate-900/30 border border-glass-border cursor-default text-xs font-semibold text-text-secondary"
+      className="skill-badge-hover flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white dark:bg-slate-900/30 border border-slate-200 dark:border-glass-border cursor-default text-xs font-semibold text-text-secondary"
     >
       <Icon 
         size={16} 
