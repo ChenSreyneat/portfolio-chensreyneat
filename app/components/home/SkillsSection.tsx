@@ -71,12 +71,14 @@ const skillCategories = [
 function SkillBadge({ name, icon: Icon, color }: { name: string; icon: any; color: string }) {
   const [isHovered, setIsHovered] = useState(false);
 
+  const isWhite = color.toUpperCase() === "#FFFFFF";
+
   // Smooth hover style that matches the brand color for borders, text, and subtle shape glow
   const badgeStyle = isHovered ? {
-    borderColor: `${color}40`,
-    backgroundColor: `${color}0b`,
-    color: color,
-    boxShadow: `0 0 12px ${color}12`,
+    borderColor: isWhite ? "rgba(255, 255, 255, 0.15)" : `${color}40`,
+    backgroundColor: isWhite ? "rgba(255, 255, 255, 0.03)" : `${color}0b`,
+    color: isWhite ? "#94A3B8" : color,
+    boxShadow: isWhite ? "none" : `0 0 12px ${color}12`,
   } : {};
 
   return (
