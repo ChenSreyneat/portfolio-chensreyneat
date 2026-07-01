@@ -1,6 +1,7 @@
 "use client";
 
-import { Code2, Layers, Database, GitBranch, PenTool, Cpu } from "lucide-react";
+import { useState } from "react";
+import { Code2, Layers, Database, GitBranch, PenTool } from "lucide-react";
 import { FaJava } from "react-icons/fa";
 import { 
   SiJavascript, SiTypescript, SiCplusplus, SiPhp, 
@@ -16,56 +17,84 @@ const skillCategories = [
     title: "Programming Languages",
     icon: Code2,
     skills: [
-      { name: "JavaScript", icon: SiJavascript, color: "text-[#F7DF1E]" },
-      { name: "TypeScript", icon: SiTypescript, color: "text-[#3178C6]" },
-      { name: "C++", icon: SiCplusplus, color: "text-[#00599C]" },
-      { name: "C#", icon: TbBrandCSharp, color: "text-[#239120]" },
-      { name: "PHP", icon: SiPhp, color: "text-[#777BB4]" },
-      { name: "Java", icon: FaJava, color: "text-[#007396]" },
+      { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+      { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+      { name: "C++", icon: SiCplusplus, color: "#00599C" },
+      { name: "C#", icon: TbBrandCSharp, color: "#239120" },
+      { name: "PHP", icon: SiPhp, color: "#777BB4" },
+      { name: "Java", icon: FaJava, color: "#007396" },
     ]
   },
   {
     title: "Frameworks & Libraries",
     icon: Layers,
     skills: [
-      { name: "React", icon: SiReact, color: "text-[#61DAFB]" },
-      { name: "Node.js", icon: SiNodedotjs, color: "text-[#339933]" },
-      { name: "Next.js", icon: SiNextdotjs, color: "text-white" },
-      { name: "TailwindCSS", icon: SiTailwindcss, color: "text-[#06B6D4]" },
-      { name: "Bootstrap", icon: SiBootstrap, color: "text-[#7952B3]" },
-      { name: "HTML/CSS", icon: SiHtml5, color: "text-[#E34F26]" },
-      { name: "Angular", icon: SiAngular, color: "text-[#DD0031]" },
-      { name: ".Net", icon: SiDotnet, color: "text-[#512BD4]" },
+      { name: "React", icon: SiReact, color: "#61DAFB" },
+      { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
+      { name: "Next.js", icon: SiNextdotjs, color: "#FFFFFF" },
+      { name: "TailwindCSS", icon: SiTailwindcss, color: "#06B6D4" },
+      { name: "Bootstrap", icon: SiBootstrap, color: "#7952B3" },
+      { name: "HTML/CSS", icon: SiHtml5, color: "#E34F26" },
+      { name: "Angular", icon: SiAngular, color: "#DD0031" },
+      { name: ".Net", icon: SiDotnet, color: "#512BD4" },
     ]
   },
   {
     title: "Database & Backend",
     icon: Database,
     skills: [
-      { name: "MySQL", icon: SiMysql, color: "text-[#4479A1]" },
-      { name: "Supabase", icon: SiSupabase, color: "text-[#3ECF8E]" },
-      { name: "MongoDB", icon: SiMongodb, color: "text-[#47A248]" },
+      { name: "MySQL", icon: SiMysql, color: "#4479A1" },
+      { name: "Supabase", icon: SiSupabase, color: "#3ECF8E" },
+      { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
     ]
   },
   {
     title: "Version Control",
     icon: GitBranch,
     skills: [
-      { name: "Git", icon: SiGit, color: "text-[#F05032]" },
-      { name: "GitHub", icon: SiGithub, color: "text-white" },
-      { name: "GitLab", icon: SiGitlab, color: "text-[#FC6D26]" },
+      { name: "Git", icon: SiGit, color: "#F05032" },
+      { name: "GitHub", icon: SiGithub, color: "#FFFFFF" },
+      { name: "GitLab", icon: SiGitlab, color: "#FC6D26" },
     ]
   },
   {
     title: "Design Skills",
     icon: PenTool,
     skills: [
-      { name: "Figma", icon: SiFigma, color: "text-[#F24E1E]" },
-      { name: "Canva", icon: SiCanva, color: "text-[#00C4CC]" },
-      { name: "Photoshop", icon: TbBrandAdobePhotoshop, color: "text-[#31A8FF]" },
+      { name: "Figma", icon: SiFigma, color: "#F24E1E" },
+      { name: "Canva", icon: SiCanva, color: "#00C4CC" },
+      { name: "Photoshop", icon: TbBrandAdobePhotoshop, color: "#31A8FF" },
     ]
   }
 ];
+
+function SkillBadge({ name, icon: Icon, color }: { name: string; icon: any; color: string }) {
+  const [isHovered, setIsHovered] = useState(false);
+
+  // Smooth hover style that matches the brand color for borders, text, and subtle shape glow
+  const badgeStyle = isHovered ? {
+    borderColor: `${color}40`,
+    backgroundColor: `${color}0b`,
+    color: color,
+    boxShadow: `0 0 12px ${color}12`,
+  } : {};
+
+  return (
+    <div 
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      style={badgeStyle}
+      className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-900/30 border border-glass-border transition-all duration-300 cursor-default text-xs font-semibold text-text-secondary"
+    >
+      <Icon 
+        size={16} 
+        style={{ color: color }} 
+        className="transition-transform duration-300 scale-100" 
+      />
+      <span className="transition-colors duration-300">{name}</span>
+    </div>
+  );
+}
 
 export default function SkillsSection() {
   return (
@@ -108,13 +137,12 @@ export default function SkillsSection() {
                 {/* Skills Badges Grid */}
                 <div className="flex flex-wrap gap-3 mt-auto">
                   {category.skills.map((skill, sIdx) => (
-                    <div 
-                      key={sIdx} 
-                      className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-900/30 border border-glass-border hover:border-accent-blue/20 hover:bg-accent-blue/5 transition-all duration-300 cursor-default text-xs font-semibold text-text-secondary hover:text-text-primary"
-                    >
-                      <skill.icon size={16} className={`${skill.color} drop-shadow-md`} />
-                      <span>{skill.name}</span>
-                    </div>
+                    <SkillBadge 
+                      key={sIdx}
+                      name={skill.name}
+                      icon={skill.icon}
+                      color={skill.color}
+                    />
                   ))}
                 </div>
               </div>
