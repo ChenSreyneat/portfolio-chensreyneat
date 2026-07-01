@@ -244,3 +244,25 @@
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+/* Dynamic Brand Skill Badge Hover Styles */
+.skill-badge-hover {
+  transition: all 0.3s ease;
+}
+
+.skill-badge-hover:hover {
+  border-color: color-mix(in srgb, var(--brand-color) 40%, transparent);
+  background-color: color-mix(in srgb, var(--brand-color) 8%, transparent);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--brand-color) 12%, transparent);
+}
+
+/* Light mode hover text color (dark blue/black for readability) */
+[data-theme="light"] .skill-badge-hover:hover {
+  color: var(--text-primary);
+}
+
+/* Dark mode hover text color (vibrant brand color or gray for white icons) */
+:root:not([data-theme="light"]) .skill-badge-hover:hover {
+  color: var(--hover-text-color);
+}
+

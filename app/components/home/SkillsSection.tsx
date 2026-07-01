@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { Code2, Layers, Database, GitBranch, PenTool } from "lucide-react";
 import { FaJava } from "react-icons/fa";
 import { 
@@ -69,22 +68,15 @@ const skillCategories = [
 ];
 
 function SkillBadge({ name, icon: Icon, color }: { name: string; icon: any; color: string }) {
-  const [isHovered, setIsHovered] = useState(false);
-
-  // Smooth hover style that matches the brand color for borders, text, and subtle shape glow
-  const badgeStyle = isHovered ? {
-    borderColor: `${color}40`,
-    backgroundColor: `${color}0b`,
-    color: color === "#FFFFFF" ? "var(--text-secondary)" : color,
-    boxShadow: `0 0 12px ${color}12`,
-  } : {};
+  const hoverTextColor = color === "#FFFFFF" ? "var(--text-secondary)" : color;
 
   return (
     <div 
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      style={badgeStyle}
-      className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-900/30 border border-glass-border transition-all duration-300 cursor-default text-xs font-semibold text-text-secondary"
+      style={{ 
+        "--brand-color": color,
+        "--hover-text-color": hoverTextColor
+      } as React.CSSProperties}
+      className="skill-badge-hover flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-500/5 dark:bg-slate-900/30 border border-glass-border cursor-default text-xs font-semibold text-text-secondary"
     >
       <Icon 
         size={16} 
