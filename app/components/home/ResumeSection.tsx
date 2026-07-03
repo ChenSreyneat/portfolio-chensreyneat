@@ -1,6 +1,6 @@
 "use client";
 
-import { Download, FileText, Calendar, Mail, MapPin, GraduationCap, Briefcase } from "lucide-react";
+import { Download, FileText, Mail, MapPin, GraduationCap, Briefcase } from "lucide-react";
 
 export default function ResumeSection() {
   return (

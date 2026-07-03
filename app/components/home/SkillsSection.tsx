@@ -67,7 +67,7 @@ const skillCategories = [
   }
 ];
 
-function SkillBadge({ name, icon: Icon, color }: { name: string; icon: any; color: string }) {
+function SkillBadge({ name, icon: Icon, color }: { name: string; icon: React.ComponentType<{ size?: number; className?: string; style?: React.CSSProperties }>; color: string }) {
   const hoverTextColor = color === "#FFFFFF" ? "var(--text-secondary)" : color;
 
   return (

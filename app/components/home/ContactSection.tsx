@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Mail, Phone, MessageSquare, User, Tag } from "lucide-react";
-import { FaLinkedin, FaTelegram } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 import Image from "next/image";
 
 export default function ContactSection() {

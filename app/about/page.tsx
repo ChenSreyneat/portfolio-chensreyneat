@@ -2,7 +2,7 @@
 
 import {
   MapPin, Globe, Users, Lightbulb, CheckCircle, MessageSquare,
-  Mail, ChevronLeft, Calendar, Briefcase, GraduationCap, Award, Compass, Heart
+  ChevronLeft, Briefcase, GraduationCap
 } from "lucide-react";
 import { FaGithub, FaLinkedin, FaTelegram } from "react-icons/fa";
 import Link from "next/link";
@@ -73,44 +73,79 @@ export default function About() {
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="px-3 py-1 rounded-full bg-accent-blue/10 border border-accent-blue/20 text-[0.65rem] font-bold text-accent-blue uppercase tracking-widest">About Me</span>
+                    <motion.span 
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: 0.2 }}
+                      className="px-3 py-1 rounded-full bg-accent-blue/10 border border-accent-blue/20 text-[0.65rem] font-bold text-accent-blue uppercase tracking-widest inline-block"
+                    >
+                      About Me
+                    </motion.span>
                   </div>
-                  <h1 className="text-4xl md:text-6xl font-black text-text-primary mb-2">
+                  <motion.h1 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    className="text-4xl md:text-6xl font-black text-text-primary mb-2"
+                  >
                     Chen <span className="text-gradient-accent">Sreyneat</span>
-                  </h1>
-                  <p className="text-accent-blue text-lg md:text-xl font-medium tracking-tight mb-4">Software Development Student</p>
-                  <p className="text-text-secondary text-base md:text-lg leading-relaxed max-w-3xl italic">
+                  </motion.h1>
+                  <motion.p 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                    className="text-accent-blue text-lg md:text-xl font-medium tracking-tight mb-4"
+                  >
+                    Software Development Student
+                  </motion.p>
+                  <motion.p 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.5 }}
+                    className="text-text-secondary text-base md:text-lg leading-relaxed max-w-3xl italic"
+                  >
                     &quot;I am a dedicated developer passionate about crafting beautiful, user-friendly applications. I blend software engineering with creativity to build responsive digital experiences.&quot;
-                  </p>
+                  </motion.p>
                 </div>
 
                 {/* Social Connect Panel */}
-                <div className="flex flex-wrap md:flex-col gap-3 min-w-[160px]">
-                  <a 
+                <motion.div 
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: 0.6 }}
+                  className="flex flex-wrap md:flex-col gap-3 min-w-[160px]"
+                >
+                  <motion.a 
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                     href="https://www.linkedin.com/in/chen-sreyneat-749654313/" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 px-4 py-2.5 rounded-xl bg-linear-to-r from-[#2c53a6] to-[#60a5fa] hover:from-[#214185] hover:to-[#4fa1ff] text-xs font-bold text-white shadow-md shadow-blue-500/10 active:scale-95 transition-all"
+                    className="flex items-center gap-3 px-4 py-2.5 rounded-xl bg-linear-to-r from-[#2c53a6] to-[#60a5fa] hover:from-[#214185] hover:to-[#4fa1ff] text-xs font-bold text-white shadow-md shadow-blue-500/20 transition-all"
                   >
                     <FaLinkedin size={16} /> LinkedIn
-                  </a>
-                  <a 
+                  </motion.a>
+                  <motion.a 
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                     href="https://github.com/" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 px-4 py-2.5 rounded-xl bg-slate-900/50 border border-glass-border text-xs font-bold text-text-secondary hover:text-white transition-all"
+                    className="flex items-center gap-3 px-4 py-2.5 rounded-xl bg-glass-bg border border-glass-border text-xs font-bold text-text-primary hover:bg-text-primary hover:text-bg-color shadow-sm transition-all"
                   >
                     <FaGithub size={16} /> GitHub
-                  </a>
-                  <a 
+                  </motion.a>
+                  <motion.a 
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                     href="https://t.me/Neat198" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 px-4 py-2.5 rounded-xl bg-slate-900/50 border border-glass-border text-xs font-bold text-text-secondary hover:text-white transition-all"
+                    className="flex items-center gap-3 px-4 py-2.5 rounded-xl bg-glass-bg border border-glass-border text-xs font-bold text-[#0088cc] hover:bg-[#0088cc] hover:text-white shadow-sm transition-all"
                   >
                     <FaTelegram size={16} /> Telegram
-                  </a>
-                </div>
+                  </motion.a>
+                </motion.div>
               </div>
             </div>
           </motion.div>
@@ -123,8 +158,11 @@ export default function About() {
               variants={itemVariants}
               className="relative group"
             >
-              <div className="relative p-6 rounded-2xl border border-glass-border bg-glass-bg backdrop-blur-xl hover:border-accent-blue/30 transition-all duration-300">
-                <h3 className="text-base font-bold text-white mb-6 uppercase tracking-wider border-b border-glass-border/50 pb-3">Pillars</h3>
+              <motion.div 
+                whileHover={{ y: -5 }}
+                className="relative p-6 rounded-2xl border border-glass-border bg-glass-bg backdrop-blur-xl hover:border-accent-blue/30 transition-all duration-300 shadow-sm hover:shadow-xl hover:shadow-accent-blue/10"
+              >
+                <h3 className="text-base font-bold text-text-primary mb-6 uppercase tracking-wider border-b border-glass-border/50 pb-3">Pillars</h3>
                 <div className="space-y-6">
                   {/* Location */}
                   <div className="flex items-center gap-4">
@@ -151,7 +189,7 @@ export default function About() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </motion.div>
 
             {/* 3. Soft Skills Card */}
@@ -159,8 +197,11 @@ export default function About() {
               variants={itemVariants}
               className="relative group"
             >
-              <div className="relative p-6 rounded-2xl border border-glass-border bg-glass-bg backdrop-blur-xl hover:border-accent-blue/30 transition-all duration-300">
-                <h3 className="text-base font-bold text-white mb-6 uppercase tracking-wider border-b border-glass-border/50 pb-3">Soft Skills</h3>
+              <motion.div 
+                whileHover={{ y: -5 }}
+                className="relative p-6 rounded-2xl border border-glass-border bg-glass-bg backdrop-blur-xl hover:border-accent-blue/30 transition-all duration-300 shadow-sm hover:shadow-xl hover:shadow-accent-blue/10"
+              >
+                <h3 className="text-base font-bold text-text-primary mb-6 uppercase tracking-wider border-b border-glass-border/50 pb-3">Soft Skills</h3>
                 <div className="grid grid-cols-1 gap-3">
                   {[
                     { icon: Users, label: "Teamwork" },
@@ -168,16 +209,17 @@ export default function About() {
                     { icon: CheckCircle, label: "Responsible" },
                     { icon: MessageSquare, label: "Communication" }
                   ].map((skill, i) => (
-                    <div 
+                    <motion.div 
                       key={i} 
-                      className="flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-900/40 border border-glass-border text-xs font-bold text-text-secondary hover:text-white hover:bg-accent-blue/5 hover:border-accent-blue/20 transition-all cursor-default"
+                      whileHover={{ x: 5 }}
+                      className="flex items-center gap-3 px-4 py-3 rounded-xl bg-glass-bg border border-glass-border text-xs font-bold text-text-secondary hover:text-text-primary hover:bg-accent-blue/10 hover:border-accent-blue/30 transition-colors shadow-sm cursor-default"
                     >
                       <skill.icon size={16} className="text-accent-blue" /> 
                       <span>{skill.label}</span>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             </motion.div>
 
           </div>

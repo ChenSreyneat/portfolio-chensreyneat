@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Home, User, Briefcase, Mail, Menu, X, Download, Flower2, Layers, Settings, GraduationCap } from "lucide-react";
+import { Home, User, Briefcase, Mail, Menu, X, Download, Flower2, Layers, GraduationCap } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {

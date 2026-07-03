@@ -8,8 +8,7 @@ import {
   SiTailwindcss, 
   SiNextdotjs, 
   SiFigma,
-  SiSketch,
-  SiInvision
+  SiSketch
 } from "react-icons/si";
 import { TbBrandVscode } from "react-icons/tb";
 

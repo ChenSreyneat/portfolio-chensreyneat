@@ -80,7 +80,7 @@ export default function HeroSection() {
                   src="/image/2.png"
                   alt="Chen Sreyneat"
                   fill
-                  className="object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] scale-110"
+                  className="object-contain object-bottom scale-110"
                   priority
                 />
               </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { Award, Trophy, Star, ExternalLink, FileText, Code, Palette, Database, Monitor, ChevronLeft, ChevronRight, X, Image as ImageIcon } from "lucide-react";
+import { Award, Trophy, Star, ExternalLink, FileText, Code, ChevronLeft, ChevronRight, X, Image as ImageIcon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
@@ -263,10 +263,12 @@ export default function CertificatesSection() {
                   />
                 ) : (
                   <div className="relative w-full h-full flex items-center justify-center">
-                    <img
+                    <Image
                       src={activeFile}
                       alt={activeTitle}
-                      className="max-w-full max-h-full object-contain rounded-2xl shadow-2xl border border-glass-border/30"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 1024px"
+                      className="object-contain rounded-2xl shadow-2xl border border-glass-border/30"
                     />
                   </div>
                 )}

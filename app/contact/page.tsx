@@ -1,5 +1,5 @@
 import { Mail, MapPin, Send, Phone } from "lucide-react";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Image from "next/image";
 
 export default function Contact() {

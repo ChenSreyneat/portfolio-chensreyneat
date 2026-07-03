@@ -1,4 +1,4 @@
-import { MapPin, Globe, Calendar, ExternalLink, GraduationCap, Award, Compass } from "lucide-react";
+import { MapPin, Globe, Calendar, ExternalLink, GraduationCap, Compass } from "lucide-react";
 import Link from "next/link";
 
 export default function AboutSection() {
@@ -19,7 +19,7 @@ export default function AboutSection() {
                       <Compass size={24} className="animate-spin" style={{ animationDuration: '20s' }} />
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-white uppercase tracking-wider">Engineering Focus</h4>
+                      <h4 className="text-sm font-bold text-text-primary uppercase tracking-wider">Engineering Focus</h4>
                       <p className="text-[0.65rem] text-text-secondary">IT Engineering Major</p>
                     </div>
                   </div>
@@ -36,7 +36,7 @@ export default function AboutSection() {
                     <GraduationCap size={20} />
                   </div>
                   <div>
-                    <h4 className="text-xs font-bold text-white mb-1">Scholarship</h4>
+                    <h4 className="text-xs font-bold text-text-primary mb-1">Scholarship</h4>
                     <p className="text-[0.65rem] text-text-secondary leading-normal">Awarded a full 4-year academic scholarship at RUPP.</p>
                   </div>
                 </div>
@@ -49,7 +49,7 @@ export default function AboutSection() {
                     <MapPin size={20} />
                   </div>
                   <div>
-                    <h4 className="text-xs font-bold text-white mb-1">Location</h4>
+                    <h4 className="text-xs font-bold text-text-primary mb-1">Location</h4>
                     <p className="text-[0.65rem] text-text-secondary leading-normal">Phnom Penh, Cambodia</p>
                   </div>
                 </div>
@@ -63,7 +63,7 @@ export default function AboutSection() {
                       <div className="p-3 bg-accent-blue/10 rounded-xl text-accent-blue flex items-center justify-center">
                         <Globe size={20} />
                       </div>
-                      <span className="text-xs font-bold text-white uppercase tracking-wider">Languages</span>
+                      <span className="text-xs font-bold text-text-primary uppercase tracking-wider">Languages</span>
                     </div>
                     <div className="flex gap-2">
                       <span className="px-3 py-1 rounded-lg bg-glass-bg border border-glass-border text-[0.65rem] font-bold text-logo-color uppercase tracking-wider">Khmer</span>

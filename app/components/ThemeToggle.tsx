@@ -10,17 +10,16 @@ export default function ThemeToggle() {
     Promise.resolve().then(() => {
       setMounted(true);
       const savedTheme = localStorage.getItem("theme") as "dark" | "light" | null;
+      let activeTheme: "dark" | "light";
       if (savedTheme) {
-        setTheme(savedTheme);
-        document.documentElement.setAttribute("data-theme", savedTheme);
+        activeTheme = savedTheme;
       } else {
-        // Check system preference
         const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
-        if (prefersLight) {
-          setTheme("light");
-          document.documentElement.setAttribute("data-theme", "light");
-        }
+        activeTheme = prefersLight ? "light" : "dark";
       }
+      setTheme(activeTheme);
+      document.documentElement.setAttribute("data-theme", activeTheme);
+      document.documentElement.classList.toggle("dark", activeTheme === "dark");
     });
   }, []);
 
@@ -28,6 +27,7 @@ export default function ThemeToggle() {
     const newTheme = theme === "dark" ? "light" : "dark";
     setTheme(newTheme);
     document.documentElement.setAttribute("data-theme", newTheme);
+    document.documentElement.classList.toggle("dark", newTheme === "dark");
     localStorage.setItem("theme", newTheme);
   };
 
